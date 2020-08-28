@@ -14,36 +14,38 @@ function bfs(rootNode, vertices, edges){
   })
 }
 
-function findAdjacent(rootPoint, vertices, edges){
-  console.log('rootPoint', rootPoint)
-  let theEdges = edges.filter( (edge) => {
-    //console.log('edge[0]', edge[0])
-    return edge[0] === rootPoint || edge[1] === rootPoint
-  })
-  //console.log('theEdges:', theEdges)
-  let arrayOfVertices = vertices.filter( (vertix) => { 
+// function findAdjacent(rootPoint, vertices, edges){
+//   console.log('rootPoint', rootPoint)
+//   let theEdges = edges.filter( (edge) => {
+//     //console.log('edge[0]', edge[0])
+//     return edge[0] === rootPoint || edge[1] === rootPoint
+//   })
+//   //console.log('theEdges:', theEdges)
+//   let arrayOfVertices = vertices.filter( (vertix) => { 
    
-      console.log('theEdges:', theEdges)
-      return theEdges.map( (e) => {
-        console.log('e:', e);
-        console.log('vertixname', vertix.name);
-        return vertix.name == e[0] || vertix.name == e[1] 
-        //(vertix.name === e[0] || vertix.name === e[1]) && vertix.name !== rootPoint ;
-      }) 
+//       console.log('theEdges:', theEdges)
+//       return theEdges.map( (e) => {
+//         console.log('e:', e);
+//         console.log('vertixname', vertix.name);
+//         return vertix.name == e[0] || vertix.name == e[1] 
+//         //(vertix.name === e[0] || vertix.name === e[1]) && vertix.name !== rootPoint ;
+//       }) 
     
-  });
+//   });
   //console.log('arrayOfVertices:', arrayOfVertices)
-  return arrayOfVertices
-}
+//   return arrayOfVertices
+// }
 
 function markDistanceAndPredecessor(rootNode, adjacentNodes){
   adjacentNodes.map( (node) => {
     node.distance = rootNode.distance + 1
     node.predecessor = rootNode
   })
-  
 }
 
+function findAdjacent(rootNodeName, vertices, edges){
+  
+}
 function findNode(nodeName, vertices){
   return vertices.map( (vertix) => {
     return vertix.name == nodeName
