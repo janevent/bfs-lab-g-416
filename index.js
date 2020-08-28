@@ -56,7 +56,7 @@ function findAdjacent(rootNodeName, vertices, edges){
   
   return edgePoints.map( (pointOfEdge)=> {
     return findNode( pointOfEdge, vertices)
-  })
+  }).flat()
 }
 
 function findNode(nodeName, vertices){
