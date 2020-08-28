@@ -43,3 +43,9 @@ function markDistanceAndPredecessor(rootNode, adjacentNodes){
   })
   
 }
+
+function findNode(nodeName, vertices){
+  return vertices.map( (vertix) => {
+    return vertix.name == nodeName
+  })
+}
