@@ -45,7 +45,7 @@ function markDistanceAndPredecessor(rootNode, adjacentNodes){
 
 function findAdjacent(rootNodeName, vertices, edges){
   return edges.map( (edge) => {
-    return edge.include(rootNodeName)
+    return edge.includes(rootNodeName)
   }).map( (edge) => {
     return edge.filter(( item) => {
       return (item != rootNodeName)
