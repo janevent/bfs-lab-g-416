@@ -60,7 +60,7 @@ function findAdjacent(rootNodeName, vertices, edges){
 }
 
 function findNode(nodeName, vertices){
-  return vertices.map( (vertix) => {
+  return vertices.filter( (vertix) => {
     return vertix.name == nodeName
   })
 }
