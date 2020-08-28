@@ -35,3 +35,7 @@ function findAdjacent(rootPoint, vertices, edges){
   //console.log('arrayOfVertices:', arrayOfVertices)
   return arrayOfVertices
 }
+
+function markDistanceAndPredecessor(){
+  
+}
