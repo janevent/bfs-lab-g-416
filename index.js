@@ -50,6 +50,8 @@ function findAdjacent(rootNodeName, vertices, edges){
     return edge.filter(( item) => {
       return (item != rootNodeName)
     })[0]
+  }).map( (pointOfEdge)=> {
+    return findNode( pointOfEdge, vertices)
   })
 }
 
