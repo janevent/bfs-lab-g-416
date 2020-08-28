@@ -36,6 +36,10 @@ function findAdjacent(rootPoint, vertices, edges){
   return arrayOfVertices
 }
 
-function markDistanceAndPredecessor(){
+function markDistanceAndPredecessor(rootNode, adjacentNodes){
+  adjacentNodes.map( (node) => {
+    node.distance = rootNode.distance + 1
+    node.predecessor = rootNode
+  })
   
 }
