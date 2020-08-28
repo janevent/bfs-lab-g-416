@@ -56,7 +56,7 @@ function findAdjacent(rootNodeName, vertices, edges){
   
   let theAdjacentNodes = edgePoints.map( (pointOfEdge)=> {
     return findNode( pointOfEdge, vertices)
-  })
+  }).filter( (node) => node.distance == null)
   
   return theAdjacentNodes
 }
