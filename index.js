@@ -48,9 +48,9 @@ function findAdjacent(rootNodeName, vertices, edges){
     return edge.include(rootNodeName)
   }).map( (edge) => {
     return edge.filter(( item) => {
-      return item != rootNodeName
-    })
-  })[0]
+      return (item != rootNodeName)
+    })[0]
+  })
 }
 
 function findNode(nodeName, vertices){
