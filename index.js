@@ -44,8 +44,8 @@ function markDistanceAndPredecessor(rootNode, adjacentNodes){
 }
 
 function findAdjacent(rootNodeName, vertices, edges){
-  let edgesWithName = edges.map( (edge) => {
-    return edge.includes(rootNodeName)
+  let edgesWithName = edges.filter( (edge) => {
+    return (edge[0] == rootNodeName || edge[1] == rootNodeName)
   })
   let edgePoints = edgesWithName.map( (edge) => {
     console.log('edge', edge)
