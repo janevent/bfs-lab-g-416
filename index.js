@@ -49,9 +49,9 @@ function findAdjacent(rootNodeName, vertices, edges){
   })
   let edgePoints = edgesWithName.map( (edge) => {
     console.log('edge', edge)
-    return edge.filter(( item) => {
+    return edge.find item) => {
       return (item != rootNodeName)
-    })[0]
+    })
   })
   
   let theAdjacentNodes = edgePoints.map( (pointOfEdge)=> {
