@@ -22,14 +22,14 @@ function findAdjacent(rootPoint, vertices, edges){
   })
   console.log('theEdges:', theEdges)
   return vertices.filter( (vertix) => { 
-    if(vertix.name !== rootPoint){
+   
       console.log('theEdges:', theEdges)
       return  theEdges.map( (e) => {
-        console.log('e:', e)
-        console.log('vertixname', vertix.name)
-        console.log('return value',  vertix.name === e[0] || vertix.name === e[1] )
-      })  
-    }
+        console.log('e:', e);
+        console.log('vertixname', vertix.name);
+        return vertix.name === e[0] || vertix.name === e[1] ;
+      }) 
+    
   });
   //console.log('arrayOfVertices:', arrayOfVertices)
   //return arrayOfVertices
