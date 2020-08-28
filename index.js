@@ -44,13 +44,16 @@ function markDistanceAndPredecessor(rootNode, adjacentNodes){
 }
 
 function findAdjacent(rootNodeName, vertices, edges){
-  return edges.map( (edge) => {
+  let edgesWithName = edges.map( (edge) => {
     return edge.includes(rootNodeName)
-  }).map( (edge) => {
+  })
+  let edgePoints = edgesWithName.map( (edge) => {
     return edge.filter(( item) => {
       return (item != rootNodeName)
     })[0]
-  }).map( (pointOfEdge)=> {
+  })
+  
+  return edgePoints.map( (pointOfEdge)=> {
     return findNode( pointOfEdge, vertices)
   })
 }
